@@ -1,5 +1,6 @@
 import { Link } from "@tanstack/react-router";
 import { useEffect, useState } from "react";
+import logo from "@/assets/urbannest-logo.jpeg";
 
 export function SiteHeader() {
   const [scrolled, setScrolled] = useState(false);
@@ -20,10 +21,14 @@ export function SiteHeader() {
       }`}
     >
       <div className="mx-auto flex max-w-[1400px] items-center justify-between px-6 py-5 md:px-12">
-        <Link to="/" className="group flex items-center gap-2">
-          <span className="flex h-8 w-8 items-center justify-center rounded-sm bg-primary text-primary-foreground font-display text-lg font-semibold">
-            U
-          </span>
+        <Link to="/" className="group flex items-center gap-3">
+          <img
+            src={logo}
+            alt="Urban Nest logo"
+            className="h-10 w-10 object-contain"
+            width={40}
+            height={40}
+          />
           <span className="font-display text-xl font-semibold tracking-tight">
             Urban<span className="italic text-muted-foreground"> nest</span>
           </span>
